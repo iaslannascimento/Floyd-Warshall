@@ -81,6 +81,7 @@ int main(){
 			b = grafo[i][i];
 		}
 	}
+	
 	if (b < 0){
         	printf("Existem ciclos negativos\n");
 		}else{
@@ -101,7 +102,8 @@ int main(){
 	}
 	printf("--------------------------------------------\n");
 	printf("\n");
-	
+	printf("A complexidade da alogoritmo Floyd Warshall eh teta(n3) - teta de n ao cubo\n");
+	printf("--------------------------------------------\n");
 
 	//printf("Total caminho mais curto do vertice 0 ao 4: %lu\n", Matriz[4][0]); // [destino] [origem]
 	//printf("Total caminho mais curto do vertice 2 ao 0: %lu\n", Matriz[0][2]);
@@ -110,10 +112,14 @@ int main(){
 	// Mostra todos os caminhos 
 	printf("\n");
 	for (int i = 0; i < v; i++){
+		printf("Distancias de %d para todos os outros vertices\n",i);
+			
 		for (int j = 0; j < v; j++){
 			printf("Menor distancia saindo do %d para chegar ao %d = %d.\n", i, j, grafo[j][i]);
 		}
+		printf("--------------------------------------------\n");
 	}
+	
 	printf("\n\n");
 
 	
